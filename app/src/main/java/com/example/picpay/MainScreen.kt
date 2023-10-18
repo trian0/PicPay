@@ -1,5 +1,6 @@
 package com.example.picpay
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.padding
@@ -14,6 +15,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
@@ -57,7 +60,8 @@ fun RowScope.AddItem(
     navController: NavHostController,
 ) {
     BottomNavigationItem(
-        label = { Text(text = screen.title) },
+        modifier = Modifier.background(Color.White),
+        label = { Text(text = screen.title, fontSize = 10.sp) },
         icon = {
             Icon(imageVector = screen.icon, contentDescription = "Navigation Icon")
         },
